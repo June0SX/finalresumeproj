@@ -1,0 +1,150 @@
+<!--
+James McKenny — Resume Website
+Course: Web Dev 
+Created: 12-05-2025
+-->
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="James McKenny — Computer Science student. Resume and projects.">
+    <title>James McKenny — Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="profile">
+                <img src="IMG_2950.jpeg" alt="Portrait of James McKenny" class="profile-img">
+                <div>
+                    <h1>James McKenny</h1>
+                    <p class="tagline">Future Systems Support / IT Professional</p>
+                </div>
+            </div>
+
+
+            <nav aria-label="Primary" class="main-nav">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+                <ul id="primary-navigation" class="nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects(WIP)</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section about container">
+            <h2>About Me</h2>
+            <p>
+                Detail-oriented computer science student with strengths in technology support, safety-minded operations,
+                and customer communication. Experienced in troubleshooting, data entry, and problem-solving under
+                pressure.
+            </p>
+            <button class="about-toggle" aria-expanded="false" aria-controls="about-detail">▼</button>
+            <div id="about-detail" class="about-detail">
+                <h2>More About Me</h2>
+                <p>
+                    I grew up between Kansas and Alabama, and those experiences, along with the support of my close-knit
+                    family, shaped who I am today. As the oldest of three, I've always tried to lead with heart and
+                    pride in
+                    my sisters' accomplishments. I've been a lifelong fan of comics, games, and all things nerdy, and
+                    over
+                    time I've expanded that passion into music, media, and cars. Although I started out introverted,
+                    I've
+                    grown into someone who enjoys connecting with others while still valuing time to recharge. Above
+                    all, my
+                    goal is to live a life full of experiences I can look back on with pride and joy.
+                </p>
+            </div>
+        </section>
+        <section id="skills" class="section skills container">
+            <h2>Skills & Experience</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Technical</h3>
+                    <ul>
+                        <li>Microsoft Office, Excel</li>
+                        <li>Windows systems, basic troubleshooting</li>
+                        <li>Visual Studio, Adobe Photoshop/Illustrator</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Operational</h3>
+                    <ul>
+                        <li>Warehouse processes, forklift operation</li>
+                        <li>Materials handling, safety compliance</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Notable Jobs</h3>
+                    <ul>
+                        <li>Security Guard (2022-2023, 2025)</li>
+                        <li>Equipment Operator (2023-2025)</li>
+                        <li>Amazon Delivery Associate (2025-now)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- No matter how hard I tried I could not get this section to function properly, I fully plan on getting this fixed over break. I would much rather turn in a completed project but it is 2 am at this current moment and I have been banging my head on GitHub for the better, or worst, part of 12 hours. My apologies.
+         ️
+        <section id="projects" class="section projects container">
+            <h2>Landing page to link onto my previous projects.</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <p>Click <a href="projects.html">here</a> to see my projects.</p>
+                </div>
+            </div>
+        </section>
+    -->
+        <section id="contact" class="section contact container">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to reach out via phone or email. I'm always open to discussing
+                opportunities, collaborations, or just connecting with like-minded individuals.</p>
+            <ul class="contact-meta">
+                <li>Phone: <a href="tel:+13343201509">+1 334-320-1509</a></li>
+                <li>Email: <a href="mailto:jkm092702@gmail.com">jkm092702@gmail.com</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navigation toggle for mobile
+            const navToggle = document.querySelector('.nav-toggle');
+            const navList = document.querySelector('.nav-list');
+
+            if (navToggle) {
+                navToggle.addEventListener('click', () => {
+                    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                    navToggle.setAttribute('aria-expanded', !isExpanded);
+                    navList.setAttribute('aria-expanded', !isExpanded);
+                });
+            }
+
+            // About section toggle
+            const aboutToggle = document.querySelector('.about-toggle');
+            const aboutDetail = document.querySelector('.about-detail');
+
+            if (aboutToggle) {
+                aboutToggle.addEventListener('click', () => {
+                    const isExpanded = aboutToggle.getAttribute('aria-expanded') === 'true';
+                    aboutToggle.setAttribute('aria-expanded', !isExpanded);
+                    aboutDetail.setAttribute('aria-expanded', !isExpanded);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
